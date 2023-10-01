@@ -2,16 +2,42 @@ import {useState} from 'react'
 import { useFormik } from "formik";
 import Input from "../component/Input";
 import Dropdown from "../component/Dropdown";
-import { userSchema } from '../utils/userShema';
-import  Button  from '../component/Button';
+
+import Button from '../component/Button';
+
+import * as Yup from "yup";
+import ModalParent from './ModalParent';
+
+
 const Book = () => {
-  const [pickupLocation,setPickupLocation] = useState("")
+  const [ pickupLocation, setPickupLocation ] = useState( "" )
+  const [ showModal, setShowModal ] = useState( false );
   const [pickupDate,setPickupDate] = useState("")
   const [dropoffLocation,setDropoffLocation] = useState("")
   const [dropoffDate,setDropoffDate] = useState("")
   const [carType,setCarType] = useState("")
-  const initialValues = {
-    _id: new Date().getTime(),
+
+
+
+ const handleSubmit = (values) =>  {
+ 
+   if ( formik.isValid ) {
+   
+     setShowModal( true )
+     
+    } 
+     }
+  
+  const Schema = Yup.object().shape( {
+  carType: Yup.string().required( "Enter a value for this field." ), 
+    pickupDate: Yup.string().required("Pick up date is required"),
+    dropoffDate: Yup.string().required("Drop off date is required"),
+    pickupLocation: Yup.string().required( "Enter a value for this field." ),
+    dropoffLocation: Yup.string().required( "Enter a value for this field." ),
+  })
+    const formik = useFormik( {
+ initialValues : {
+ 
     carType: carType,
     pickupDate: pickupDate,
     pickupLocation: pickupLocation,
@@ -19,15 +45,12 @@ const Book = () => {
     dropoffLocation: dropoffDate,
    
     
-  }
-  const handleSubmit = (values) => {
-    console.log(values)
+  },
+      validationSchema: Schema
+     
+    ,
+       onSubmit: handleSubmit
    
- }
-    const formik = useFormik( {
-    initialValues,
-    validationSchema: userSchema,
-    onSubmit: handleSubmit
     
   } );
   return (
@@ -135,10 +158,21 @@ const Book = () => {
                 
             <Button
               type="submit"
-              handleClick={ handleSubmit }
-            small color='primary'>Search</Button>
+              handleClick={formik.ha}
+              small color='primary'>
+              Search
+            </Button>
                 </div>
-           </form>
+        </form>
+        { showModal && <ModalParent
+        
+          pickupDate={ pickupDate }
+          pickupLocation={ pickupLocation }
+          dropoffDate={ dropoffDate }
+          dropoffLocation={ dropoffLocation }
+          carType={carType}
+          showModal={ showModal }
+          setShowModal={ setShowModal } /> }
       </div>
     </div>
     

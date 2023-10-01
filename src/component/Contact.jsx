@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useFormik } from "formik";
-import { userSchema } from '../utils/userShema';
+ import * as Yup from 'yup';
 import Input from './Input';
 import  Button  from './Button';
 import TextArea from './TextArea';
@@ -8,7 +8,22 @@ const Contact = () => {
   const [firstName,setFirstName]=useState("")
   const [email,setEmail]=useState("")
   const [message,setMessage]=useState("")
-    const initialValues = {
+   
+    const Schema = Yup.object().shape( {
+    firstName: Yup.string().required( "Enter a value for this field." ), 
+   message: Yup.string().required( "Enter a value for this field." ), 
+    
+    email: Yup.string().email( "invalid email" ).required( "Enter a value for this field." ),
+    
+  
+    
+  })
+    const handleSubmit = (values) => {
+    console.log(values)
+   
+ }
+   const formik = useFormik( {
+     initialValues : {
     _id: new Date().getTime(),
     firstName: firstName,
     email: email,
@@ -16,14 +31,8 @@ const Contact = () => {
    
    
     
-  }
-    const handleSubmit = (values) => {
-    console.log(values)
-   
- }
-   const formik = useFormik( {
-    initialValues,
-    validationSchema: userSchema,
+  },
+    validationSchema: Schema,
     onSubmit: handleSubmit
     
   } );
