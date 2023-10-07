@@ -6,7 +6,7 @@ const Dropdown = ({header,name,onBlur,onChange,data,value,error, required}) => {
            <div className="flex flex-col gap-1.5">
               <label
                 htmlFor={name}
-                className="text-sm md:text-base font-semibold font-Nunito text-secondary-200"
+                className="text-sm lg:text-base font-semibold font-pop text-secondary-200"
               >
                 {header} {required&& <span className="text-primary-100 font-semibold">*</span>}
               </label>

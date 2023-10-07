@@ -41,8 +41,8 @@ const Navbar = () => {
       "bg-white z-50 fixed top-0 left-0  " }` }>
       <div className="w-11/12  mx-auto flex justify-between items-center">
         <Link to="home" smooth={ true } spy={ true } offset={ -150 } className='cursor-pointer flex flex-col text-xl font-one items-center '>
-          <img className='py-3 w-20 md:w-28' src={ Logo } alt="" />
-          <p className="-mt-4 text-primary-200">Car Rental</p>
+          <img className='py-3 w-16 md:w-28' src={ Logo } alt="" />
+         
         </Link>
         <div className="hidden lg:flex font-pop items-center  gap-8">
           <Link to="home" activeClass="currently" smooth={ true } spy={ true } offset={ -200 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Home</Link>

@@ -74,7 +74,7 @@ const ModalParent = ( {
   } );
   const actionBar =
     <div>
-    <button className="fixed top-8 right-8 text-xl" onClick={ handleClose }><AiOutlineClose /></button>
+    <button className="fixed top-5 right-5 text-xl" onClick={ handleClose }><AiOutlineClose /></button>
     </div>
   
 
@@ -84,22 +84,22 @@ const ModalParent = ( {
       <h1 className="text-xl md:text-3xl  tracking-wide font-pop font-bold text-primary-100 ">
         Complete Reservation
       </h1>
-      <p className="text-sm text-secondary-400 italic my-3">
+      <p className="text-xs md:text-sm text-secondary-400 italic my-3">
         Upon completing this reservation enquiry, you will receive:
         Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number
       </p>
       <form onSubmit={ formik.handleSubmit }>
-        <div className="flex justify-between">
+        <div className="flex flex-col lg:flex-row justify-between">
 
         
         <div className="">
 
-      <span className=" font-semibold flex font-pop gap-1 items-center py-2 ">
+      <span className=" font-semibold text-sm md:text-base flex font-pop gap-1 items-center py-2 ">
         <FaLocationDot />
         <p>Pick up Date and Time</p>
         </span> 
         <div className="flex items-center gap-3">
-          <p className="font-pop w-full text-secondary-300 text-small">{ pickupDate }/</p>
+          <p className="font-pop w-full  text-sm md:text-base text-secondary-300 text-small">{ pickupDate }/</p>
           <Input
             type="time"
             require={ true }
@@ -111,15 +111,15 @@ const ModalParent = ( {
             />
         </div>
         
-        <span className="font-semibold flex font-pop gap-1 items-center py-2">
+        <span className="font-semibold text-sm md:text-base flex font-pop gap-1 items-center py-2">
           
           <FaLocationDot />
           
           <p>Drop off Date and Time</p>
           
         </span> 
-        <div className="flex items-center gap-3">
-          <p className="font-pop  w-full text-secondary-300">{ dropoffDate }/</p>
+        <div className="flex text-sm md:text-base items-center gap-3">
+          <p className="font-pop  w-full text-sm md:text-base text-secondary-300">{ dropoffDate }/</p>
           <Input
             type="time"
             id="dropoffTime"
@@ -137,23 +137,24 @@ const ModalParent = ( {
           
         </div>
           </div>
-          <div className="flex items-start font-semibold font-pop py-2 ">
-          Car:{carType}
+          <div className="flex gap-3 text-sm md:text-base items-start w-full font-pop py-2 ">
+            <p className="font-semibold ">Car Model:</p>
+         <span className=" text-secondary-300 text-small">{carType}</span>
         </div>
         
               </div>
-        <span className=" py-2 font-semibold  flex font-pop gap-1 items-center ">
+        <span className=" py-2  text-sm md:text-base font-semibold  flex font-pop gap-1 items-center ">
           <FaLocationDot />
           <p>Pick up Location</p>
         </span> 
-        <p className="font-pop text-secondary-300">{ pickupLocation }</p>
+        <p className="font-pop  text-sm md:text-base text-secondary-300">{ pickupLocation }</p>
         
-        <span className=" py-2  font-semibold flex font-pop gap-1 items-center ">
+        <span className=" py-2   text-sm md:text-base font-semibold flex font-pop gap-1 items-center ">
           <FaLocationDot />
           <p>Drop off Location</p>
         </span> 
 
-        <p className="font-pop pb-4 text-secondary-300">{ dropoffLocation }</p>
+        <p className="font-pop pb-4 text-sm md:text-base text-secondary-300">{ dropoffLocation }</p>
         <p className="uppercase border-t-[1px]  text-primary-100 font-semibold font-pop py-4">Personal information</p>
         <div className="flex flex-col gap-5">
           

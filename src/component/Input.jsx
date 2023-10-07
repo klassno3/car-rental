@@ -19,7 +19,7 @@ const Input = ({
       { label ?
       <label
       htmlFor={name}
-      className="text-sm md:text-base font-semibold text-secondary-200"
+      className="text-sm lg:text-base font-semibold font-pop text-secondary-200"
       >
         {label} {require&& <span className="text-primary-100 font-semibold">*</span>}
       </label>

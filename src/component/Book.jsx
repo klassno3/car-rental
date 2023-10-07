@@ -60,7 +60,7 @@ const Book = () => {
           Book a car
         </h4>
         <form onSubmit={ formik.handleSubmit }>
-          <div className="grid grid-cols-3 gap-10 items-center">
+          <div className="grid  md:grid-cols-3 gap-10 items-center">
             <Dropdown
               header="Select car type"
               label="Select car type"
