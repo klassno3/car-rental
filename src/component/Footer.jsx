@@ -36,9 +36,9 @@ const Footer = () => {
         <p className="text-sm text-secondary-400 md:w-1/2 ">
           We offers a big range of vehicles for all your driving needs. We have the perfect car to meet your needs.
         </p>
-        <div className="flex gap-1 items-center "><FaPhone />
+        <div className="flex gap-1 md:text-base text-sm items-center "><FaPhone />
         <span className="text-secondary-200">(123) -456-789</span></div>
-        <div className="flex gap-1 items-center "><FaMailBulk />
+        <div className="flex  md:text-base text-sm gap-1 items-center "><FaMailBulk />
         <span className="text-secondary-200">carrental@gmail.com</span></div>
           </div>
           
