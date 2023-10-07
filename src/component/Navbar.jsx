@@ -37,11 +37,11 @@ const Navbar = () => {
   return (
   
 
-    <div  ref={ divEl }  className={ `w-full ${ active ? "bg-white z-50 shadow-xl font-lato fixed top-0 left-0  " :
+    <div  ref={ divEl }  className={ `w-full py-1 ${ active ? "bg-white z-50 shadow-xl font-lato fixed top-0 left-0  " :
       "bg-white z-50 fixed top-0 left-0  " }` }>
       <div className="w-11/12  mx-auto flex justify-between items-center">
         <Link to="home" smooth={ true } spy={ true } offset={ -150 } className='cursor-pointer flex flex-col text-xl font-one items-center '>
-          <img className='py-3 w-16 md:w-28' src={ Logo } alt="" />
+          <img className='py-3 w-16 md:w-24' src={ Logo } alt="" />
          
         </Link>
         <div className="hidden lg:flex font-pop items-center  gap-8">

@@ -7,11 +7,11 @@ const VehicleTable = ({ details }) => {
     <div className="flex flex-col justify-start md:items-end align-end ">
       <div className="flex flex-col">
         <div className="text-lg font-pop bg-primary-100 text-white px-8 py-4">
-          <span className="text-2xl">{price}</span>
-          <span className="">/ rent per day</span>
+          <span className="text-lg md:text-2xl">{price}</span>
+          <span className="text-sm md:text-base">/ rent per day</span>
         </div>
 
-        <div className="border-[2px] border-t-0 border-primary-100">
+        <div className="border-[2px] text-sm md:text-base border-t-0 border-primary-100">
          <div className=" bg-gray-200/30 font-pop  border-b-[1px] border-secondary-400/50 px-8 py-4 flex gap-4">
             <p className="">Model </p>
             <p className="">|</p>

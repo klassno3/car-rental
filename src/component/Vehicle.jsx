@@ -41,7 +41,7 @@ const Vehicle = () => {
     <div
       key={carModel}
       onClick={() => handleClick(carModel)}
-      className="font-semibold text-lg font-pop bg-gray-200/30 text-secondary-200 px-8 py-4 hover:bg-primary-100 hover:text-white transition-all duration-300 cursor-pointer"
+      className="font-semibold md:text-lg font-pop bg-gray-200/30 text-secondary-200 px-8 py-4 hover:bg-primary-100 hover:text-white transition-all duration-300 cursor-pointer"
     >
       <p>{carModel}</p>
     </div>
