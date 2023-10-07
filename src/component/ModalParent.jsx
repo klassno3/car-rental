@@ -16,6 +16,7 @@ const ModalParent = ( {
   pickupLocation,
   dropoffDate,
   dropoffLocation,
+  completed
   
 } ) => {
   
@@ -33,7 +34,9 @@ const ModalParent = ( {
       console.log(values)
       
     } 
-    setShowModal(false)
+    setShowModal( false )
+    
+    completed(true)
      }
   
   const Schema = Yup.object().shape( {
@@ -92,14 +95,14 @@ const ModalParent = ( {
         <div className="flex flex-col lg:flex-row justify-between">
 
         
-        <div className="">
+        <div className=" w-full ">
 
       <span className=" font-semibold text-sm md:text-base flex font-pop gap-1 items-center py-2 ">
         <FaLocationDot />
         <p>Pick up Date and Time</p>
         </span> 
-        <div className="flex items-center gap-3">
-          <p className="font-pop w-full  text-sm md:text-base text-secondary-300 text-small">{ pickupDate }/</p>
+        <div className="flex items-center justify-start ">
+          <p className="font-pop w-1/2 text-sm md:text-base text-secondary-300 text-small">{ pickupDate }/</p>
           <Input
             type="time"
             require={ true }
@@ -118,8 +121,8 @@ const ModalParent = ( {
           <p>Drop off Date and Time</p>
           
         </span> 
-        <div className="flex text-sm md:text-base items-center gap-3">
-          <p className="font-pop  w-full text-sm md:text-base text-secondary-300">{ dropoffDate }/</p>
+        <div className="flex  text-sm md:text-base items-center gap-3">
+          <p className="font-pop w-1/2  text-sm md:text-base text-secondary-300">{ dropoffDate }/</p>
           <Input
             type="time"
             id="dropoffTime"
@@ -137,7 +140,7 @@ const ModalParent = ( {
           
         </div>
           </div>
-          <div className="flex gap-3 text-sm md:text-base items-start w-full font-pop py-2 ">
+          <div className="flex gap-3 text-sm md:text-base items-start lg:justify-end w-full font-pop py-2 ">
             <p className="font-semibold ">Car Model:</p>
          <span className=" text-secondary-300 text-small">{carType}</span>
         </div>

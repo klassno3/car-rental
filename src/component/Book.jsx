@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { useFormik } from "formik";
 import Input from "../component/Input";
 import Dropdown from "../component/Dropdown";
@@ -7,10 +7,12 @@ import Button from '../component/Button';
 
 import * as Yup from "yup";
 import ModalParent from './ModalParent';
+import { AiOutlineClose } from 'react-icons/ai';
 
 
 const Book = () => {
   const [ pickupLocation, setPickupLocation ] = useState( "" )
+  const [ isCompleted, setIsCompleted ] = useState( false )
   const [ showModal, setShowModal ] = useState( false );
   const [pickupDate,setPickupDate] = useState("")
   const [dropoffLocation,setDropoffLocation] = useState("")
@@ -52,13 +54,34 @@ const Book = () => {
        onSubmit: handleSubmit
    
     
-  } );
+    } );
+  
+  const handleClose= () => {
+   setIsCompleted(false)
+  }
+   useEffect(() => {
+    if (isCompleted) {
+      const timeout = setTimeout(() => {
+        setIsCompleted(false);
+      }, 7000);
+
+      return () => {
+        clearTimeout(timeout);
+      };
+    }
+  }, [isCompleted]);
+  const completed=( <div className='flex justify-between bg-green-200 text-secondary-300 font-pop py-3 px-4 rounded'><p className="">Check your email to confirm an order.</p>
+        
+       <button onClick={ handleClose }><AiOutlineClose /></button>
+        </div>) 
+
   return (
     <div className="w-11/12 book bg-book bg-cover bg-no-repeat mx-auto my-28">
       <div className="px-8 py-10 rounded shadow-lg">
         <h4 className="text-lg pb-5 md:text-2xl tracking-wide font-pop font-bold text-secondary-200">
           Book a car
         </h4>
+        { isCompleted ? completed :null}
         <form onSubmit={ formik.handleSubmit }>
           <div className="grid  md:grid-cols-3 gap-10 items-center">
             <Dropdown
@@ -165,6 +188,7 @@ const Book = () => {
                 </div>
         </form>
         { showModal && <ModalParent
+          completed={setIsCompleted}
         
           pickupDate={ pickupDate }
           pickupLocation={ pickupLocation }
