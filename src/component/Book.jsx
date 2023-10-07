@@ -54,7 +54,7 @@ const Book = () => {
     
   } );
   return (
-    <div className="w-11/12  bg-book bg-cover bg-no-repeat mx-auto my-28">
+    <div className="w-11/12 book bg-book bg-cover bg-no-repeat mx-auto my-28">
       <div className="px-8 py-10 rounded shadow-lg">
         <h4 className="text-lg pb-5 md:text-2xl tracking-wide font-pop font-bold text-secondary-200">
           Book a car

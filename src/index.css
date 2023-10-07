@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.current {
+.currently {
 
 color: #f1533b;
 font-weight: bold;

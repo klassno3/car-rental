@@ -25,14 +25,15 @@ const ModalParent = ( {
   const handleClose = () => {
     setShowModal(false)
   }
-   const handleSubmit = (values) =>  {
-     formik.setTouched ({
-       firstName:true
- })
-   if ( formik.isValid ) {
-         console.log(values)
-     
+  const handleSubmit = (values) =>  {
+    formik.setTouched ({
+      firstName:true
+    })
+    if ( formik.isValid ) {
+      console.log(values)
+      
     } 
+    setShowModal(false)
      }
   
   const Schema = Yup.object().shape( {
@@ -156,7 +157,7 @@ const ModalParent = ( {
         <p className="uppercase border-t-[1px]  text-primary-100 font-semibold font-pop py-4">Personal information</p>
         <div className="flex flex-col gap-5">
           
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
           <Input
             type="text"
             label="First Name"
@@ -183,7 +184,7 @@ const ModalParent = ( {
           
         </div>
         
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
           <Input
             
             type="tel"
@@ -237,7 +238,7 @@ const ModalParent = ( {
             onChange={formik.handleChange }
             />
 
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
 
           <Input
             type="text"

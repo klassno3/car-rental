@@ -8,6 +8,7 @@ import FAQ from './component/FAQ'
 import Footer from "./component/Footer"
 import Book from './component/Book'
 import Contact from './component/Contact'
+import Vehicle from './component/Vehicle'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Book/>
       <About />
       <WhyChooseUs />
+      <Vehicle />
       <Testimonial />
       <FAQ />
       <Contact/>

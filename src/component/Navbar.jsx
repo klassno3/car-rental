@@ -45,11 +45,11 @@ const Navbar = () => {
           <p className="-mt-4 text-primary-200">Car Rental</p>
         </Link>
         <div className="hidden lg:flex font-pop items-center  gap-8">
-          <Link to="home" activeClass="current" smooth={ true } spy={ true } offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Home</Link>
-          <Link to="about" activeClass="current"  smooth={ true } spy={ true }  offset={-150}  className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">About Us</Link>
-          <Link to="vehicle models"  activeClass="current" smooth={ true } spy={ true }  offset={-150}  className=" hover:text-primary-200 transition-all duration-300 cursor-pointer ">Vehicle Models</Link>
-          <Link to="testimonials" activeClass="current"  smooth={ true }  offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer ">Testimonials</Link>
-          <Link to="contact" activeClass="current"  smooth={ true }  offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer ">Contact</Link>
+          <Link to="home" activeClass="currently" smooth={ true } spy={ true } offset={ -200 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Home</Link>
+          <Link to="about" activeClass="currently"  smooth={ true } spy={ true }  offset={-150}  className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">About Us</Link>
+          <Link to="vehicle"activeClass="currently"  smooth={ true } spy={ true }  offset={-150}  className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Vehicle Models</Link>
+          <Link to="testimonials" activeClass="currently"  smooth={ true } spy={ true }  offset={-150}  className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Testimonials</Link>
+          <Link to="contact" activeClass="currently"  smooth={ true } spy={ true }  offset={-150}  className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Contact</Link>
         </div>
         <div className="hidden lg:flex gap-8 font-pop">
           <button className='hover:text-primary-200 transition-all duration-300 '>Sign in</button>
@@ -72,11 +72,11 @@ const Navbar = () => {
       </div>
       <div className={ `transition-all duration-500 flex justify-center items-center absolute overflow-x-hidden h-screen translate-x-0  w-3/4  top-[63px] bg-white ${ isOpen ? "lg:hidden right-0 " : "-right-full" }` }>
         <div className="flex flex-col font-pop items-center gap-10">
-          <Link onClick={()=>setIsOpen(false)} to="home" activeClass="currently" smooth={ true } className=" hover:text-primary-200  transition-all duration-300 cursor-pointer">Home</Link>
-          <Link onClick={()=>setIsOpen(false)} to="about"  activeClass="currently" smooth={ true }   className="  hover:text-primary-200 transition-all duration-300  cursor-pointer">About Us</Link>
-          <Link onClick={()=>setIsOpen(false)} to="Vehicle Models"  activeClass="currently" smooth={ true }   className="  hover:text-primary-200 transition-all duration-300  cursor-pointer">Vehicle Models</Link>
-          <Link onClick={()=>setIsOpen(false)} to="testimonials"  smooth={ true }   className=" hover:text-primary-200 transition-all duration-300  cursor-pointer">Testimonials</Link>
-          <Link onClick={()=>setIsOpen(false)} to="contact"  smooth={ true }   className=" hover:text-primary-200 transition-all duration-300  cursor-pointer">Contact</Link>
+          <Link onClick={()=>setIsOpen(false)} to="home" activeClass="currently" smooth={ true } spy={ true } offset={ -200 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Home</Link>
+          <Link onClick={()=>setIsOpen(false)} to="about"  activeClass="currently" smooth={ true } spy={ true } offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">About Us</Link>
+          <Link onClick={()=>setIsOpen(false)} to="Vehicle"  activeClass="currently" smooth={ true } spy={ true } offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Vehicle Models</Link>
+          <Link onClick={()=>setIsOpen(false)} to="testimonials" activeClass="currently" smooth={ true } spy={ true } offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Testimonials</Link>
+          <Link onClick={()=>setIsOpen(false)} to="contact"  activeClass="currently" smooth={ true } spy={ true } offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Contact</Link>
         </div>
       </div>
     </div>
