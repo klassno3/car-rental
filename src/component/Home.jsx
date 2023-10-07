@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../image/hero.png'
 import Button from '../component/Button'
-
+import {Link } from 'react-scroll'
 const Home = () => {
   return (
     <div className='home'>
@@ -17,12 +17,18 @@ const Home = () => {
             </div>
 
             <div className="flex   gap-10">
+              <Link to='book' smooth={ true } offset={-150}>
+
               <Button color="primary" >
              Book Ride
               </Button>
+              </Link>
+                <Link to='about' smooth={ true } offset={-150}>
               <Button icon  color="secondary">
                Learn more
               </Button>
+              </Link>
+              
             </div>
 
           </div>
