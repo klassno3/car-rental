@@ -30,7 +30,7 @@ const Footer = () => {
     <div className='bg-gray-100  font-pop py-5'>
       <div className="w-11/12 mx-auto ">
         <img src={ Logo } alt="" className="w-20 h-20" />
-        <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col gap-12 md:flex-row justify-between">
 
         <div className="flex flex-col gap-2">
         <p className="text-sm text-secondary-400 md:w-1/2 ">
@@ -42,11 +42,11 @@ const Footer = () => {
         <span className="text-secondary-200">carrental@gmail.com</span></div>
           </div>
           
-          <div className="flex flex-col gap-3 w-1/2 items-end ">
+          <div className="flex flex-col gap-3 md:w-1/2 items-end ">
             <div className="flex flex-col items-start gap-4">
               
 
-            <div className="flex flex-col ">
+            <div className="flex flex-col  ">
               <h4 className="text-lg md:text-2xl tracking-wide font-pop font-bold text-secondary-200">Subscription</h4>
               <p className="text-sm font-pop text-secondary-400  ">
                 Subscribe your Email address for latest news & updates.

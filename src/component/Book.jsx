@@ -70,7 +70,7 @@ const Book = () => {
       };
     }
   }, [isCompleted]);
-  const completed=( <div className='mb-4 flex justify-between bg-green-200 text-secondary-300 font-pop py-3 px-4 rounded'><p className="">Check your email to confirm an order.</p>
+  const completed=( <div className='mb-4 flex justify-between text-sm md:text-base bg-green-200 text-secondary-300 font-pop py-3 px-4 rounded'><p className="">Check your email to confirm an order.</p>
         
        <button onClick={ handleClose }><AiOutlineClose /></button>
         </div>) 
