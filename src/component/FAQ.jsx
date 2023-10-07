@@ -25,7 +25,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <div className='w-9/12 font-pop mx-auto py-10'>
+    <div className=' w-11/12 md:w-9/12 font-pop mx-auto py-10'>
         <div className="mx-auto items-center text-center  pb-10 flex flex-col gap-3">
                     <h3 className="text-sm tracking-wide font-pop  text-secondary-200 uppercase">FAQ</h3>
         <h3 className="text-xl md:text-3xl  tracking-wide font-pop font-bold text-secondary-200 ">Frequently Asked Questions</h3>

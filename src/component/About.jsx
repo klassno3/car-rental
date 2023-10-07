@@ -80,7 +80,7 @@ const About = () => {
         </div>
         </div>
       </div>
-      <div className='bg-secondary-200 my-20 py-12'>
+      <div className='bg-secondary-200 text-center px-2 my-20 py-12'>
         <div className="flex flex-col gap-1 md:gap-3 items-center">
           
                     <h1 className="text-xl md:text-2xl lg:text-5xl tracking-wide font-pop font-bold text-white ">Save big with our cheap car rental!</h1>

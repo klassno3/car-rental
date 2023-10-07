@@ -16,7 +16,7 @@ const Home = () => {
             <p className="text-base font-pop text-secondary-400 md:w-10/12 text-center lg:text-left">Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.</p>
             </div>
 
-            <div className="flex   gap-10">
+            <div className="flex flex-col sm:flex-row items-center  gap-10">
               <Link to='book' smooth={ true } offset={-150}>
 
               <Button color="primary" >

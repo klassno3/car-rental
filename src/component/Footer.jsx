@@ -30,7 +30,7 @@ const Footer = () => {
     <div className='bg-gray-100  font-pop py-5'>
       <div className="w-11/12 mx-auto ">
         <img src={ Logo } alt="" className="w-20 h-20" />
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
 
         <div className="flex flex-col gap-2">
         <p className="text-sm text-secondary-400 md:w-1/2 ">

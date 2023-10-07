@@ -70,7 +70,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <div className={ `transition-all duration-500 flex justify-center items-center absolute overflow-x-hidden h-screen translate-x-0  w-3/4  top-[63px] bg-white ${ isOpen ? "lg:hidden right-0 " : "-right-full" }` }>
+      <div className={ `transition-all duration-500 flex justify-center items-center absolute overflow-x-hidden h-screen translate-x-0  w-3/4  top-[50px] bg-white ${ isOpen ? "lg:hidden right-0 " : "-right-full" }` }>
         <div className="flex flex-col font-pop items-center gap-10">
           <Link onClick={()=>setIsOpen(false)} to="home" activeClass="currently" smooth={ true } spy={ true } offset={ -200 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">Home</Link>
           <Link onClick={()=>setIsOpen(false)} to="about"  activeClass="currently" smooth={ true } spy={ true } offset={ -150 } className=" hover:text-primary-200 transition-all duration-300 cursor-pointer">About Us</Link>
